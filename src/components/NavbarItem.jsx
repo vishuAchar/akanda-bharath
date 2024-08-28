@@ -8,12 +8,11 @@ export default function NavbarItem({ title, param }) {
   const genre = searchParams.get("genre");
   return (
     <div
-      className={`hover:text-amber-600 font-semibold p-4 cursor-pointer ${
+      className={`hover:text-amber-600 font-semibold p-2 cursor-pointer ${
         genre &&
         genre === param &&
         "underline underline-offset-8 decoration-2 decoration-amber-500 rounded-lg"
-      }`}
-    >
+      }`}>
       <Link href={`/?genre=${param}`}>{title}</Link>
     </div>
   );
